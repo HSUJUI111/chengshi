@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>橙拾 隱私政策 · Chengshi Privacy Policy</title>
+<style>
+  :root { --orange: #F07B2D; --ink: #1A1A1A; --bg: #FFF8F2; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang TC", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: var(--bg); color: var(--ink); line-height: 1.75;
+    padding: 32px 20px; max-width: 720px; margin: 0 auto;
+  }
+  header { border-bottom: 4px solid var(--ink); padding-bottom: 20px; margin-bottom: 12px; }
+  h1 { font-size: 28px; font-weight: 800; }
+  h1 .emoji { margin-right: 6px; }
+  .meta { color: #7a6a5d; font-weight: 600; margin-top: 8px; font-size: 14px; }
+  h2 { font-size: 19px; font-weight: 800; margin: 26px 0 10px; color: var(--orange); }
+  p { margin-bottom: 10px; }
+  ul { margin: 0 0 10px 20px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 800; }
+  a { color: var(--orange); font-weight: 700; }
+  .note {
+    background: #fff; border: 3px solid var(--ink); border-radius: 8px;
+    padding: 14px 16px; margin: 16px 0; box-shadow: 4px 4px 0 var(--ink); font-size: 14px;
+  }
+  footer { margin-top: 36px; padding-top: 18px; border-top: 2px solid #e3d5c8; color: #9a8a7d; font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <h1><span class="emoji">🍊</span>橙拾 隱私政策</h1>
+  <p class="meta">生效日期：2026-06-27　｜　聯絡信箱：<a href="mailto:rickyhsujui1023@gmail.com">rickyhsujui1023@gmail.com</a></p>
+</header>
+
+<div class="note">
+  本文與 App 內 <code>PrivacyInfo.xcprivacy</code> 聲明一致。橙拾涉及個人財務資訊，建議於上線前由法律專業人士依當地法規（台灣個人資料保護法、GDPR 等）複核，尤其跨境傳輸條款。
+</div>
+
+<p>橙拾（以下簡稱「本應用」）尊重並保護你的隱私。本政策說明我們收集哪些資訊、如何使用與保護，以及你的權利。</p>
+
+<h2>一、我們收集的資訊</h2>
+<p>僅收集為你提供記帳功能所必需的資訊：</p>
+<ul>
+  <li><strong>電子郵件 / Apple 帳號</strong>：用於登入與識別你的帳號。海外版透過 Sign in with Apple 或電子郵件註冊登入；若使用 Apple 私密轉發信箱，我們僅取得該轉發位址。</li>
+  <li><strong>帳號識別碼（使用者 ID）</strong>：用於隔離與同步你的資料。</li>
+  <li><strong>記帳資料</strong>：你輸入的交易金額、收支類型、分類、商家、備註、發生時間，以及你設定的預算。</li>
+  <li><strong>語音（僅轉寫、不留存音檔）</strong>：使用「按住說話」記帳時，裝置將你的語音轉寫為文字。<strong>我們不儲存、不上傳原始音檔</strong>；語音辨識由 Apple 系統能力完成。</li>
+</ul>
+<p>我們<strong>不收集</strong>：位置、通訊錄、相簿（除非你主動上傳頭像圖片）、用於追蹤的裝置識別碼、廣告識別碼。本應用<strong>無任何第三方廣告或跨應用追蹤</strong>。</p>
+
+<h2>二、我們如何使用資訊</h2>
+<ul>
+  <li>提供記帳、帳單統計、預算提醒、跨裝置同步等核心功能。</li>
+  <li>將你的語音轉寫文字／交易文字傳送至 AI 服務解析為結構化帳目（見第三條）。</li>
+</ul>
+
+<h2>三、第三方服務與資料共享</h2>
+<p>我們僅在提供功能所必需時，將必要資料交由以下服務商處理（均不用於其自身目的或廣告）：</p>
+<ul>
+  <li><strong>Supabase（資料儲存與同步）</strong>：你的帳號與記帳資料儲存於其託管資料庫，伺服器位於海外（詳見第五條）。</li>
+  <li><strong>DeepSeek（AI 語意解析）</strong>：你的語音轉寫文字／手動記帳文字會傳送給 DeepSeek 解析出金額、分類等。僅傳輸該次記帳文本，不含你的帳號全貌。</li>
+  <li><strong>Apple</strong>：語音辨識（SFSpeechRecognizer）與 Sign in with Apple 登入由 Apple 系統提供。</li>
+</ul>
+
+<h2>四、資料儲存與安全</h2>
+<ul>
+  <li>資料以列級安全（RLS）按帳號嚴格隔離，你只能存取自己的資料。</li>
+  <li>傳輸全程加密（HTTPS/TLS）。</li>
+  <li>本地離線快取於你的裝置，連網後自動同步。</li>
+</ul>
+
+<h2>五、跨境傳輸</h2>
+<p>本應用使用之雲端服務（Supabase）伺服器位於海外。使用本應用即表示你<strong>理解並同意</strong>，為實現記帳與同步功能，你的相關個人資料將被傳輸至海外伺服器處理與儲存。我們將依法採取必要的安全保障措施。</p>
+
+<h2>六、你的權利</h2>
+<ul>
+  <li><strong>查看／匯出</strong>：App 內可查看全部記帳資料。</li>
+  <li><strong>更正／刪除</strong>：可編輯或刪除任意記錄。</li>
+  <li><strong>刪除帳號</strong>：於「個人中心 › 設定 › 刪除帳號」可永久移除你的帳號及全部關聯資料，此操作不可復原。</li>
+  <li>行使權利或有疑問，請來信 <a href="mailto:rickyhsujui1023@gmail.com">rickyhsujui1023@gmail.com</a>。</li>
+</ul>
+
+<h2>七、未成年人</h2>
+<p>本應用不面向 14 歲以下兒童，不有意收集其個人資訊。</p>
+
+<h2>八、政策變更</h2>
+<p>本政策更新時將在本頁公布並更新「生效日期」，重大變更會在 App 內提示。</p>
+
+<h2>九、聯絡我們</h2>
+<p>信箱：<a href="mailto:rickyhsujui1023@gmail.com">rickyhsujui1023@gmail.com</a></p>
+
+<footer>
+  © 2026 橙拾（Chengshi）. 隱私政策。
+</footer>
+</body>
+</html>
