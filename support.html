@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hans">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>橙拾 技術支援 · Chengshi Support</title>
+<title>橙拾 技术支持 · Chengshi Support</title>
 <style>
   :root { --orange: #F07B2D; --ink: #1A1A1A; --bg: #FFF8F2; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: -apple-system, "PingFang TC", "PingFang SC", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, "PingFang SC", "PingFang TC", "Helvetica Neue", sans-serif;
     background: var(--bg); color: var(--ink); line-height: 1.7;
     padding: 32px 20px; max-width: 720px; margin: 0 auto;
   }
-  header { border-bottom: 4px solid var(--ink); padding-bottom: 20px; margin-bottom: 28px; }
+  header { border-bottom: 4px solid var(--ink); padding-bottom: 20px; margin-bottom: 28px; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
   h1 { font-size: 30px; font-weight: 800; }
   h1 .emoji { margin-right: 6px; }
   .sub { color: #7a6a5d; font-weight: 600; margin-top: 4px; }
@@ -25,12 +25,70 @@
   a { color: var(--orange); font-weight: 700; }
   .contact { font-size: 18px; font-weight: 800; }
   footer { margin-top: 36px; padding-top: 18px; border-top: 2px solid #e3d5c8; color: #9a8a7d; font-size: 13px; }
+  #lang-toggle {
+    flex: 0 0 auto; background: #fff; border: 3px solid var(--ink); border-radius: 8px;
+    padding: 8px 14px; font-weight: 800; font-size: 14px; cursor: pointer;
+    box-shadow: 3px 3px 0 var(--ink); color: var(--ink);
+  }
+  #lang-toggle:active { box-shadow: 1px 1px 0 var(--ink); transform: translate(2px, 2px); }
 </style>
 </head>
 <body>
+
+<button id="lang-toggle" type="button" onclick="toggleLang()">繁體</button>
+
+<div id="content-hans">
 <header>
-  <h1><span class="emoji">🍊</span>橙拾 技術支援</h1>
-  <p class="sub">誠實記帳，把錢拾起來。｜ AI 語音記帳工具</p>
+  <div>
+    <h1><span class="emoji">🍊</span>橙拾 技术支持</h1>
+    <p class="sub">诚实记账，把钱拾起来。｜ AI 语音记账工具</p>
+  </div>
+</header>
+
+<h2>联络我们</h2>
+<div class="card">
+  <p>使用上有任何问题、建议或账号需求，欢迎来信，我们会尽快回复：</p>
+  <p class="contact"><a href="mailto:rickyhsujui1023@gmail.com">rickyhsujui1023@gmail.com</a></p>
+</div>
+
+<h2>常见问题</h2>
+<div class="card">
+  <p class="q">如何记账？</p>
+  <p>在记账页按住麦克风说话（例：「中午麦当劳花了 120 元」），AI 会自动识别金额、分类与商家；也可切换键盘手动输入，或对 Siri 说「用橙拾记账」。</p>
+</div>
+<div class="card">
+  <p class="q">如何登录？忘记密码怎么办？</p>
+  <p>支持 Sign in with Apple 一键登录，或使用电子邮箱注册。若用邮件登录忘记密码，于登录页点「忘记密码」，输入邮箱即可收信重设。</p>
+</div>
+<div class="card">
+  <p class="q">如何订阅或取消 Pro／家庭方案？</p>
+  <p>于「个人中心 › 升级橙拾 Pro」选购。取消请至「设置 › Apple ID › 订阅」，于当期到期前取消即可，当期结束前仍可使用。</p>
+</div>
+<div class="card">
+  <p class="q">我的数据会同步吗？</p>
+  <p>登录后数据自动云端同步。离线时可正常记账，联网后自动上传，多设备共用同一账号即可看到相同数据。</p>
+</div>
+<div class="card">
+  <p class="q">如何删除账号与数据？</p>
+  <p>于「个人中心 › 设置 › 删除账号」可永久移除你的账号与全部记账数据，此操作不可恢复。</p>
+</div>
+
+<h2>隐私政策</h2>
+<div class="card">
+  <p>我们仅收集记账功能所必需的数据，且不做跨应用追踪、无广告。详见 <a href="./privacy.html">隐私政策</a>。</p>
+</div>
+
+<footer>
+  © 2026 橙拾（Chengshi）. 本页为 App Store 技术支持页面。
+</footer>
+</div>
+
+<div id="content-hant" style="display:none">
+<header>
+  <div>
+    <h1><span class="emoji">🍊</span>橙拾 技術支援</h1>
+    <p class="sub">誠實記帳，把錢拾起來。｜ AI 語音記帳工具</p>
+  </div>
 </header>
 
 <h2>聯絡我們</h2>
@@ -69,5 +127,20 @@
 <footer>
   © 2026 橙拾（Chengshi）. 本頁為 App Store 技術支援頁面。
 </footer>
+</div>
+
+<script>
+  function applyLang(lang) {
+    document.documentElement.lang = lang;
+    document.getElementById('content-hans').style.display = lang === 'zh-Hans' ? '' : 'none';
+    document.getElementById('content-hant').style.display = lang === 'zh-Hant' ? '' : 'none';
+    document.getElementById('lang-toggle').textContent = lang === 'zh-Hans' ? '繁體' : '简体';
+    localStorage.setItem('chengshi-lang', lang);
+  }
+  function toggleLang() {
+    applyLang(document.documentElement.lang === 'zh-Hans' ? 'zh-Hant' : 'zh-Hans');
+  }
+  applyLang(localStorage.getItem('chengshi-lang') || 'zh-Hans');
+</script>
 </body>
 </html>

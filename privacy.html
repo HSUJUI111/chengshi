@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-Hans">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>橙拾 隱私政策 · Chengshi Privacy Policy</title>
+<title>橙拾 隐私政策 · Chengshi Privacy Policy</title>
 <style>
   :root { --orange: #F07B2D; --ink: #1A1A1A; --bg: #FFF8F2; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: -apple-system, "PingFang TC", "PingFang SC", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, "PingFang SC", "PingFang TC", "Helvetica Neue", sans-serif;
     background: var(--bg); color: var(--ink); line-height: 1.75;
     padding: 32px 20px; max-width: 720px; margin: 0 auto;
   }
-  header { border-bottom: 4px solid var(--ink); padding-bottom: 20px; margin-bottom: 12px; }
+  header { border-bottom: 4px solid var(--ink); padding-bottom: 20px; margin-bottom: 12px; display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
   h1 { font-size: 28px; font-weight: 800; }
   h1 .emoji { margin-right: 6px; }
   .meta { color: #7a6a5d; font-weight: 600; margin-top: 8px; font-size: 14px; }
@@ -27,12 +27,94 @@
     padding: 14px 16px; margin: 16px 0; box-shadow: 4px 4px 0 var(--ink); font-size: 14px;
   }
   footer { margin-top: 36px; padding-top: 18px; border-top: 2px solid #e3d5c8; color: #9a8a7d; font-size: 13px; }
+  #lang-toggle {
+    flex: 0 0 auto; background: #fff; border: 3px solid var(--ink); border-radius: 8px;
+    padding: 8px 14px; font-weight: 800; font-size: 14px; cursor: pointer;
+    box-shadow: 3px 3px 0 var(--ink); color: var(--ink);
+  }
+  #lang-toggle:active { box-shadow: 1px 1px 0 var(--ink); transform: translate(2px, 2px); }
 </style>
 </head>
 <body>
+
+<button id="lang-toggle" type="button" onclick="toggleLang()">繁體</button>
+
+<div id="content-hans">
 <header>
-  <h1><span class="emoji">🍊</span>橙拾 隱私政策</h1>
-  <p class="meta">生效日期：2026-06-27　｜　聯絡信箱：<a href="mailto:rickyhsujui1023@gmail.com">rickyhsujui1023@gmail.com</a></p>
+  <div>
+    <h1><span class="emoji">🍊</span>橙拾 隐私政策</h1>
+    <p class="meta">生效日期：2026-06-27　｜　联络信箱：<a href="mailto:rickyhsujui1023@gmail.com">rickyhsujui1023@gmail.com</a></p>
+  </div>
+</header>
+
+<div class="note">
+  本文与 App 内 <code>PrivacyInfo.xcprivacy</code> 声明一致。橙拾涉及个人财务信息，建议于上线前由法律专业人士依当地法规（台湾个人资料保护法、GDPR 等）复核，尤其跨境传输条款。
+</div>
+
+<p>橙拾（以下简称「本应用」）尊重并保护你的隐私。本政策说明我们收集哪些信息、如何使用与保护，以及你的权利。</p>
+
+<h2>一、我们收集的信息</h2>
+<p>仅收集为你提供记账功能所必需的信息：</p>
+<ul>
+  <li><strong>电子邮箱 / Apple 账号</strong>：用于登录与识别你的账号。海外版通过 Sign in with Apple 或电子邮箱注册登录；若使用 Apple 私密转发邮箱，我们仅取得该转发地址。</li>
+  <li><strong>账号识别码（用户 ID）</strong>：用于隔离与同步你的数据。</li>
+  <li><strong>记账数据</strong>：你输入的交易金额、收支类型、分类、商家、备注、发生时间，以及你设置的预算。</li>
+  <li><strong>语音（仅转写、不留存音频）</strong>：使用「按住说话」记账时，设备将你的语音转写为文字。<strong>我们不存储、不上传原始音频</strong>；语音识别由 Apple 系统能力完成。</li>
+</ul>
+<p>我们<strong>不收集</strong>：位置、通讯录、相册（除非你主动上传头像图片）、用于追踪的设备识别码、广告识别码。本应用<strong>无任何第三方广告或跨应用追踪</strong>。</p>
+
+<h2>二、我们如何使用信息</h2>
+<ul>
+  <li>提供记账、账单统计、预算提醒、跨设备同步等核心功能。</li>
+  <li>将你的语音转写文字／交易文字传送至 AI 服务解析为结构化账目（见第三条）。</li>
+</ul>
+
+<h2>三、第三方服务与数据共享</h2>
+<p>我们仅在提供功能所必需时，将必要数据交由以下服务商处理（均不用于其自身目的或广告）：</p>
+<ul>
+  <li><strong>Supabase（数据存储与同步）</strong>：你的账号与记账数据存储于其托管数据库，服务器位于海外（详见第五条）。</li>
+  <li><strong>DeepSeek（AI 语义解析）</strong>：你的语音转写文字／手动记账文字会传送给 DeepSeek 解析出金额、分类等。仅传输该次记账文本，不含你的账号全貌。</li>
+  <li><strong>Apple</strong>：语音识别（SFSpeechRecognizer）与 Sign in with Apple 登录由 Apple 系统提供。</li>
+</ul>
+
+<h2>四、数据存储与安全</h2>
+<ul>
+  <li>数据以行级安全（RLS）按账号严格隔离，你只能访问自己的数据。</li>
+  <li>传输全程加密（HTTPS/TLS）。</li>
+  <li>本地离线缓存于你的设备，联网后自动同步。</li>
+</ul>
+
+<h2>五、跨境传输</h2>
+<p>本应用使用的云端服务（Supabase）服务器位于海外。使用本应用即表示你<strong>理解并同意</strong>，为实现记账与同步功能，你的相关个人数据将被传输至海外服务器处理与存储。我们将依法采取必要的安全保障措施。</p>
+
+<h2>六、你的权利</h2>
+<ul>
+  <li><strong>查看／导出</strong>：App 内可查看全部记账数据。</li>
+  <li><strong>更正／删除</strong>：可编辑或删除任意记录。</li>
+  <li><strong>删除账号</strong>：于「个人中心 › 设置 › 删除账号」可永久移除你的账号及全部关联数据，此操作不可恢复。</li>
+  <li>行使权利或有疑问，请来信 <a href="mailto:rickyhsujui1023@gmail.com">rickyhsujui1023@gmail.com</a>。</li>
+</ul>
+
+<h2>七、未成年人</h2>
+<p>本应用不面向 14 岁以下儿童，不有意收集其个人信息。</p>
+
+<h2>八、政策变更</h2>
+<p>本政策更新时将在本页公布并更新「生效日期」，重大变更会在 App 内提示。</p>
+
+<h2>九、联络我们</h2>
+<p>信箱：<a href="mailto:rickyhsujui1023@gmail.com">rickyhsujui1023@gmail.com</a></p>
+
+<footer>
+  © 2026 橙拾（Chengshi）. 隐私政策。
+</footer>
+</div>
+
+<div id="content-hant" style="display:none">
+<header>
+  <div>
+    <h1><span class="emoji">🍊</span>橙拾 隱私政策</h1>
+    <p class="meta">生效日期：2026-06-27　｜　聯絡信箱：<a href="mailto:rickyhsujui1023@gmail.com">rickyhsujui1023@gmail.com</a></p>
+  </div>
 </header>
 
 <div class="note">
@@ -95,5 +177,20 @@
 <footer>
   © 2026 橙拾（Chengshi）. 隱私政策。
 </footer>
+</div>
+
+<script>
+  function applyLang(lang) {
+    document.documentElement.lang = lang;
+    document.getElementById('content-hans').style.display = lang === 'zh-Hans' ? '' : 'none';
+    document.getElementById('content-hant').style.display = lang === 'zh-Hant' ? '' : 'none';
+    document.getElementById('lang-toggle').textContent = lang === 'zh-Hans' ? '繁體' : '简体';
+    localStorage.setItem('chengshi-lang', lang);
+  }
+  function toggleLang() {
+    applyLang(document.documentElement.lang === 'zh-Hans' ? 'zh-Hant' : 'zh-Hans');
+  }
+  applyLang(localStorage.getItem('chengshi-lang') || 'zh-Hans');
+</script>
 </body>
 </html>
